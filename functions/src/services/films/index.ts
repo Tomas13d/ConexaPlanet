@@ -19,7 +19,7 @@ export const getSingleFilm = async (id: string) => {
       return response.data;
     } catch (err) {
       logger.error(`Error getSingleFilm service > ${err}`);
-      throw Error(`Error getSingleFilms service > ${err}`);
+      throw Error(`Error getSingleFilm service > ${err}`);
     }
   };
   
