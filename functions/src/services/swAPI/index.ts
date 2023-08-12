@@ -8,7 +8,7 @@ export const getAll = async (endpoint: string) => {
     return response.data;
   } catch (err) {
     logger.error(`Error getAll service of ${endpoint} > ${err}`);
-    throw Error(`Error getAll service of ${endpoint} > ${err}`);
+    return err
   }
 };
 
@@ -18,6 +18,7 @@ export const getSingleOne = async (endpoint: string, id: string) => {
     return response.data;
   } catch (err) {
       logger.error(`Error getSingleOne service of ${endpoint} > ${err}`);
-      throw Error(`Error getSingleOne service of ${endpoint} > ${err}`);
+      return err
+      
   }
 };
