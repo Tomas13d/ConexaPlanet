@@ -1,13 +1,13 @@
 import express from "express";
 import { logger } from "firebase-functions/v1";
-import { getAllStarships, getSingleStarships } from "../../services/starships";
+import { getAll, getSingleOne } from "../../services/swAPI";
 
 const startshipRouter = express.Router();
 
 startshipRouter.get("/", async (req, res) => {
   try {
-    const allPeople = await getAllStarships();
-    return res.send(allPeople);
+    const allStarships = await getAll("starships");
+    return res.send(allStarships);
   } catch (err) {
     logger.error(`Error bringing all starships: ${err}`);
     return res.status(500).send({ message: err });
@@ -23,8 +23,8 @@ startshipRouter.get("/:id", async (req, res) => {
         message: "starship id is required",
       });
     }
-    const allPeople = await getSingleStarships(id);
-    return res.send(allPeople);
+    const singleStarship = await getSingleOne("starships", id);
+    return res.send(singleStarship);
   } catch (err) {
     logger.error(`Error bringing starship ${id}: ${err}`);
     return res.status(500).json({ message: err });

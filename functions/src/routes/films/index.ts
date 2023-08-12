@@ -1,13 +1,13 @@
 import express from "express";
 import { logger } from "firebase-functions/v1";
-import { getAllFilms, getSingleFilm} from "../../services/films";
+import { getAll, getSingleOne } from "../../services/swAPI";
 
 const filmsRouter = express.Router();
 
 filmsRouter.get("/", async (req, res) => {
   try {
-    const allPeople = await getAllFilms();
-    return res.send(allPeople);
+    const allFilms = await getAll("films");
+    return res.send(allFilms);
   } catch (err) {
     logger.error(`Error bringing all films: ${err}`);
     return res.status(500).send({ message: err });
@@ -23,8 +23,8 @@ filmsRouter.get("/:id", async (req, res) => {
         message: "film id is required",
       });
     }
-    const allPeople = await getSingleFilm(id);
-    return res.send(allPeople);
+    const singleFilm = await getSingleOne("films", id)
+    return res.send(singleFilm);
   } catch (err) {
     logger.error(`Error bringing film ${id}: ${err}`);
     return res.status(500).json({ message: err });
