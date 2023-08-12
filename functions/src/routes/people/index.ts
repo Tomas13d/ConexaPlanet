@@ -4,7 +4,7 @@ import { getAllPeople, getSinglePerson } from "../../services/people";
 
 const peopleRouter = express.Router();
 
-peopleRouter.get("/all", async (req, res) => {
+peopleRouter.get("/", async (req, res) => {
   try {
     const allPeople = await getAllPeople();
     return res.send(allPeople);
@@ -14,9 +14,9 @@ peopleRouter.get("/all", async (req, res) => {
   }
 });
 
-peopleRouter.get("/person/:id", async (req, res) => {
+peopleRouter.get("/:id", async (req, res) => {
+  const { id } = req.params;
   try {
-    const { id } = req.params;
     if (!id) {
       return res.status(400).json({
         error: "invalid-params",
@@ -26,7 +26,7 @@ peopleRouter.get("/person/:id", async (req, res) => {
     const allPeople = await getSinglePerson(id);
     return res.send(allPeople);
   } catch (err) {
-    logger.error(`Error bringing all people: ${err}`);
+    logger.error(`Error bringing person ${id}: ${err}`);
     return res.status(500).json({ message: err });
   }
 });
