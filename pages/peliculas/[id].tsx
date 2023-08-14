@@ -6,7 +6,7 @@ import { Film } from "../../types/global";
 import styles from "../../styles/singleMovie.module.css";
 import SkeletonLoader from "../../components/skeletonLoader";
 
-export default function VerMas() {
+export default function SingelMovie() {
   const router = useRouter();
   const { id } = router.query;
   const [singleMovie, setSingleMovie] = useState<Film>();
