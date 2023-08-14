@@ -76,7 +76,7 @@ export default function VerMas() {
           <div className="col-sm-12 col-md-6">
             <img
               className={styles.personImage}
-              src={singlePerson?.image ? singlePerson.image : ""}
+              src={singlePerson?.image}
             />
           </div>
         </div>
