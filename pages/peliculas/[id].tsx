@@ -17,8 +17,6 @@ export default function VerMas() {
     try {
       if (id && typeof id === "string") {
         const singleFilm = await getSingleOne("films", id);
-        console.log("singleFilm->", singleFilm);
-        
         singleFilm.image =
         singleFilm && namesToFind.includes(singleFilm.title)
             ? `/static/img/${singleFilm.title
