@@ -20,7 +20,7 @@ export default function VerMas() {
                 espaciales que reflejan la amalgama única de tecnología:
               </p>
               {starships.map((starship) => (
-                <p>{starship.name}</p>
+                <p key={starship.name}>{starship.name}</p>
               ))}
             </div>
           )}

@@ -20,7 +20,7 @@ export default function VerMas() {
                 orbitan en la órbita de la curiosidad y la maravilla:
               </p>
               {planets.map((planet) => (
-                <p>{planet.name}</p>
+                <p key={planet.name}>{planet.name}</p>
               ))}
             </div>
           )}
