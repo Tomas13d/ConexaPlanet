@@ -76,3 +76,9 @@ export interface Planet {
     url: string;
     image?: string
   }
+
+  export interface Item {
+    id: number;
+    name: string;
+    description?: string;
+  }

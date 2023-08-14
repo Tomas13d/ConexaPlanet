@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Navbar from "../../components/navbar";
 import { getSingleOne } from "../../services/getDataServices";
@@ -7,7 +7,7 @@ import styles from "../../styles/singlePerson.module.css";
 import Image from "next/image";
 import SkeletonLoader from "../../components/skeletonLoader";
 
-export default function VerMas() {
+export default function SiglePerson() {
   const router = useRouter();
   const { id } = router.query;
   const [singlePerson, setSinglePerson] = useState<Character>();
