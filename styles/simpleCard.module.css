@@ -1,0 +1,38 @@
+.simpleCardContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 115px;
+  background-color: #000;
+}
+
+.swImage {
+  width: 150px;
+  max-height: 150px;
+  border-radius: 6px;
+}
+
+.infoContainer {
+  margin-left: 60px;
+  margin-top: 10px;
+}
+
+.infoTitle {
+  font-weight: 400;
+  font-family: "Akshar", sans-serif;
+}
+
+.swLink {
+  text-decoration: none;
+  color: #fff;
+}
+
+.description {
+  color: #fff;
+  font-family: "Akshar", sans-serif;
+}
+
+@media only screen and (max-width: 750px) {
+  .simpleCardContainer {
+    margin-left: 40px;
+  }
+}

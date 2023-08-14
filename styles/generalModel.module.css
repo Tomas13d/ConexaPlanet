@@ -1,0 +1,11 @@
+.peopleSection{
+    padding: 20px;
+    background-color: black;
+    min-height: 50vh;
+}
+
+@media only screen and (max-width: 750px) {
+    .experiencesCardContainer{
+        margin-top: 40px;
+    }
+   }

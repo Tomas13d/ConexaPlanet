@@ -1,9 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "../styles/Home.module.css";
 import Welcome from "../sections/welcome";
 import Navbar from "../components/navbar";
+import People from "../sections/people";
+import Ships from "../sections/ships";
+import Planets from "../sections/planets";
+import Movies from "../sections/movies";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -11,8 +13,14 @@ export default function Home() {
       <Head>
         <title>Conexa Planet</title>
       </Head>
-      <Navbar />
-      <Welcome />
+      <div className={styles.mainContainer}>
+        <Navbar />
+        <Welcome />
+        <People />
+        <Ships />
+        <Planets />
+        <Movies />
+      </div>
     </>
   );
 }

@@ -1,0 +1,23 @@
+.swButton {
+    background-color: black;
+    border: 2px solid #788596;
+    color: #788596;
+    border-radius: 20px;
+    padding: 8px 15px;
+}
+.linkTo{
+    text-decoration: none;
+    color: #788596;
+    font-family: "Akshar", sans-serif;
+}
+.linkTo:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.swButton:hover {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border: none;
+    color: black;
+}
