@@ -4,7 +4,7 @@ import styles from "../../styles/seeMore.module.css";
 
 export default function VerMas() {
   const { starships, isLoading } = useShips();
-  
+
   return (
     <div className={styles.mainContainer}>
       <Navbar />
@@ -15,6 +15,10 @@ export default function VerMas() {
             <div className="spinner-border text-warning" role="status"></div>
           ) : (
             <div className={styles.swEffect}>
+              <p>
+                Ingenieros y diseñadores han forjado naves
+                espaciales que reflejan la amalgama única de tecnología:
+              </p>
               {starships.map((starship) => (
                 <p>{starship.name}</p>
               ))}

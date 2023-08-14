@@ -28,9 +28,9 @@
     margin: 0 auto;
     letter-spacing: 1.5px;
     max-width: 1080px;
-    height: 500px;
+    height: 900px;
     transform: perspective(200px) rotateX(14deg);
-    animation: intro 40s linear infinite;
+    animation: intro 30s linear infinite;
     font-family: "Akshar", sans-serif;
   }
 
@@ -51,7 +51,7 @@
       opacity: 0.5;
     }
     100% {
-      transform: perspective(200px) rotateX(20deg) translateY(-700px);
+      transform: perspective(200px) rotateX(20deg) translateY(-1000px);
       opacity: 0;
     }
   }

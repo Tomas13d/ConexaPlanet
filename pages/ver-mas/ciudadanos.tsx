@@ -4,7 +4,7 @@ import styles from "../../styles/seeMore.module.css";
 
 export default function VerMas() {
   const { people, isLoading } = usePeople();
-  
+
   return (
     <div className={styles.mainContainer}>
       <Navbar />
@@ -15,6 +15,10 @@ export default function VerMas() {
             <div className="spinner-border text-warning" role="status"></div>
           ) : (
             <div className={styles.swEffect}>
+              <p>
+                Han surgido a lo largo de los años ciudadanos cuyas hazañas y
+                logros han iluminado las páginas de la historia:
+              </p>
               {people.map((person) => (
                 <p>{person.name}</p>
               ))}
