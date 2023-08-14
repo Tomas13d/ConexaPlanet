@@ -20,7 +20,7 @@ export default function VerMas() {
                 logros han iluminado las páginas de la historia:
               </p>
               {people.map((person) => (
-                <p>{person.name}</p>
+                <p key={person.name}>{person.name}</p>
               ))}
             </div>
           )}

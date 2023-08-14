@@ -3,13 +3,14 @@ import SkeletonLoader from "../components/skeletonLoader";
 import SimpleCard from "../components/simpleCard";
 import styles from "../styles/generalModel.module.css";
 import StarWarsButton from "../components/starwarsButton";
+import Link from "next/link";
 
 export default function People() {
   const { selectedPeople, isLoading } = usePeople();
- 
+
   return isLoading?.selectedPeople ? (
     <div className="row">
-     <div className="col-12">
+      <div className="col-12">
         <SkeletonLoader repeat={1} vRepeat={1} />
         <SkeletonLoader repeat={1} vRepeat={2} />
       </div>
@@ -26,18 +27,30 @@ export default function People() {
         >
           CIUDADANOS ILUSTRES
         </h3>
-        <StarWarsButton text="VER MAS" linkTo="/ver-mas/ciudadanos"/>
+        <StarWarsButton text="VER MAS" linkTo="/ver-mas/ciudadanos" />
       </div>
 
       <div
         className={`col-sm-12 col-md-6 col-lg-6 ${styles.experiencesCardContainer}`}
       >
-        {selectedPeople.map((person) => (
-          <SimpleCard
-            name={person.name}
-            birth={person.birth_year}
-            image={person?.image ? person.image : ""}
-          />
+        {selectedPeople.map((person, i) => (
+          <Link
+          key={person.name}
+          className="noLink"
+            href={`/persona/${
+              person.name === "Luke Skywalker"
+                ? "1"
+                : person.name === "Darth Vader"
+                ? "4"
+                : "5" // harcodeado por tiempo, ademas hay datos que no devuelven nada ej: /startships/8 (esta raro eso en la API)
+            }`}
+          >
+            <SimpleCard
+              name={person.name}
+              birth={person.birth_year}
+              image={person?.image ? person.image : ""}
+            />
+          </Link>
         ))}
       </div>
     </section>
