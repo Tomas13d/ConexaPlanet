@@ -1,6 +1,6 @@
 .welcomeSection {
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,14 +94,12 @@
     background-size: cover;
     justify-content: center;
   }
-  .tomas {
+  .traveler {
     font-size: 40px;
   }
 
-  .im {
-    font-size: 40px;
-  }
   .welcome {
-    font-size: 40px;
+    font-size: 30px;
+    max-width: 100%;
   }
 }

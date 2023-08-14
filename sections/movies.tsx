@@ -15,7 +15,7 @@ export default function Movies() {
       </div>
     </div>
   ) : (
-    <section className={`row ${styles.peopleSection}`} id="ciudadanos">
+    <section className={`row ${styles.peopleSection}`} id="peliculas">
       <div className="col-sm-12 col-md-6 col-lg-6">
         <h3
           className="titles stickyHeader"
