@@ -1,0 +1,40 @@
+.mainContainer {
+  background-color: black;
+  position: relative;
+}
+
+.skeletonCotainer {
+  padding-top: 185px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contentContainer {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 145px;
+}
+
+.detailsContainer {
+  margin-left: 20px;
+  margin-top: 40px;
+  max-width: 50%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.797);
+  border-radius: 6px;
+  color: #d3cd17;
+  padding: 20px;
+  font-family: "Akshar", sans-serif;
+}
+
+.backgroungImage {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+.imgBackground {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

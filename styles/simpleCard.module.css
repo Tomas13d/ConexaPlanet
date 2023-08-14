@@ -9,7 +9,12 @@
   width: 150px;
   max-height: 150px;
   border-radius: 6px;
+  transition: transform .2s;
 }
+.swImage:hover {
+  transform: scale(1.2);
+}
+
 
 .infoContainer {
   margin-left: 60px;

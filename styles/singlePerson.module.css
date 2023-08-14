@@ -1,0 +1,76 @@
+.mainContainer {
+  background-color: black;
+}
+
+.skeletonCotainer{
+  padding-top: 185px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contentContainer {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 145px;
+}
+.informationCont {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.messageAndClientCont {
+  position: relative;
+}
+
+.messagesCont {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.bubble {
+  margin-bottom: 90px;
+  position: relative;
+  font-size: var(--font-size);
+  width: 100%;
+  background: #494949;
+  border-radius: 12px;
+  padding: 10px 15px;
+  color: #fff;
+  text-align: right;
+  padding: 30px;
+  font-family: "Akshar", sans-serif;
+}
+
+.clientImgAndNameCont {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 150px;
+  right: 0px;
+}
+
+
+.personImage {
+  border-radius: 6px;
+}
+
+@media only screen and (max-width: 750px) {
+  .informationCont {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 70px;
+  }
+  .clientImgAndNameCont {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 30px;
+    right: 120px;
+  }
+}

@@ -17,9 +17,9 @@ export default function Home() {
         <Navbar />
         <Welcome />
         <People />
+        <Movies />
         <Ships />
         <Planets />
-        <Movies />
       </div>
     </>
   );

@@ -4,7 +4,7 @@ import styles from "../../styles/seeMore.module.css";
 
 export default function VerMas() {
   const { planets, isLoading } = usePlanets();
-  
+
   return (
     <div className={styles.mainContainer}>
       <Navbar />
@@ -15,8 +15,12 @@ export default function VerMas() {
             <div className="spinner-border text-warning" role="status"></div>
           ) : (
             <div className={styles.swEffect}>
+              <p>
+                En el vecindario celeste de Conexa, varios planetas cercanos
+                orbitan en la órbita de la curiosidad y la maravilla:
+              </p>
               {planets.map((planet) => (
-                <p>{planet.name}</p>
+                <p key={planet.name}>{planet.name}</p>
               ))}
             </div>
           )}
