@@ -1,0 +1,58 @@
+.mainContainer{
+    background-color: black;
+}
+
+.contentContainer{
+    width: 100vw;
+    height: 100vh;
+    padding-top: 160px;
+    overflow: hidden;
+}
+
+.title{
+    color: #d3cd17;
+}
+
+.swEffectCotainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+.swEffect {
+    overflow: hidden;
+    padding: 40px 40px 0px 40px;
+    text-align: justify;
+    margin: 0 auto;
+    letter-spacing: 1.5px;
+    max-width: 1080px;
+    height: 500px;
+    transform: perspective(200px) rotateX(14deg);
+    animation: intro 40s linear infinite;
+    font-family: "Akshar", sans-serif;
+  }
+
+
+  .swEffect :is(h2, p) {
+    color: #F5ED17;
+    font-size: 30px;
+
+    font-family: "Akshar", sans-serif;
+  }
+
+  @keyframes intro {
+    0% {
+      transform: perspective(200px) rotateX(14deg) translateY(400px);
+      opacity: 1;
+    }
+    60% {
+      opacity: 0.5;
+    }
+    100% {
+      transform: perspective(200px) rotateX(20deg) translateY(-700px);
+      opacity: 0;
+    }
+  }
+  

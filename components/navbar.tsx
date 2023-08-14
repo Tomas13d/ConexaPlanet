@@ -26,7 +26,7 @@ export default function Navbar() {
           <ul className="navbar-nav mr-auto">
             {["ciudadanos", "naves", "planetas", "peliculas"].map((item) => (
               <li className="nav-item">
-                <a className={`nav-link ${styles.navText}`} href={`#${item}`}>
+                <a className={`nav-link ${styles.navText}`} href={`/#${item}`}>
                   {item.toUpperCase()}
                 </a>
               </li>

@@ -26,7 +26,7 @@ export default function Ships() {
         >
           NUESTRAS NAVES
         </h3>
-        <StarWarsButton text="VER MAS" linkTo="/naves"/>
+        <StarWarsButton text="VER MAS" linkTo="/ver-mas/naves"/>
       </div>
 
       <div

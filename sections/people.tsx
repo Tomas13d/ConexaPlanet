@@ -26,7 +26,7 @@ export default function People() {
         >
           CIUDADANOS ILUSTRES
         </h3>
-        <StarWarsButton text="VER MAS" linkTo="/ciudadanos"/>
+        <StarWarsButton text="VER MAS" linkTo="/ver-mas/ciudadanos"/>
       </div>
 
       <div

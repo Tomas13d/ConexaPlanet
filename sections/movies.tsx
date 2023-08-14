@@ -1,8 +1,8 @@
 import usePeople from "../hooks/usePeople";
 import SkeletonLoader from "../components/skeletonLoader";
 import SimpleCard from "../components/simpleCard";
-import styles from "../styles/generalModel.module.css";
 import useFilms from "../hooks/useFilms";
+import styles from "../styles/generalModel.module.css";
 
 export default function Movies() {
   const { selectedFilms, isLoading } = useFilms();

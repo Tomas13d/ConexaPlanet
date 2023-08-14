@@ -26,7 +26,7 @@ export default function Planets() {
         >
           PLANETAS CERCANOS
         </h3>
-        <StarWarsButton text="VER MAS" linkTo="/planetas"/>
+        <StarWarsButton text="VER MAS" linkTo="/ver-mas/planetas"/>
       </div>
 
       <div
